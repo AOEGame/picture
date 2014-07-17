@@ -5,5 +5,6 @@
 
 #include "PPLabel.h"
 #include "PPConfig.h"
+#include "PPHelp.h"
 
 #endif

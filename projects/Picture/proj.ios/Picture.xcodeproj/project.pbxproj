@@ -243,7 +243,7 @@
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		9D8E93E919764E96008B1C08 /* PPLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93E719764E96008B1C08 /* PPLabel.cpp */; };
 		9D8E93F019765699008B1C08 /* PPHelp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93EE19765699008B1C08 /* PPHelp.mm */; };
-		9D8E93F2197656EC008B1C08 /* PPHelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93F1197656EC008B1C08 /* PPHelp.cpp */; };
+		9D8E93F519766498008B1C08 /* PPImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93F419766498008B1C08 /* PPImagePicker.m */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -768,7 +768,8 @@
 		9D8E93ED19765406008B1C08 /* PPHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PPHead.h; path = ../Classes/PPHead.h; sourceTree = "<group>"; };
 		9D8E93EE19765699008B1C08 /* PPHelp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPHelp.mm; path = ../Classes/PPHelp.mm; sourceTree = "<group>"; };
 		9D8E93EF19765699008B1C08 /* PPHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPHelp.h; path = ../Classes/PPHelp.h; sourceTree = "<group>"; };
-		9D8E93F1197656EC008B1C08 /* PPHelp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPHelp.cpp; path = ../Classes/PPHelp.cpp; sourceTree = "<group>"; };
+		9D8E93F319766498008B1C08 /* PPImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPImagePicker.h; path = ../Classes/PPImagePicker.h; sourceTree = "<group>"; };
+		9D8E93F419766498008B1C08 /* PPImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPImagePicker.m; path = ../Classes/PPImagePicker.m; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1311,7 +1312,8 @@
 				9D8E93ED19765406008B1C08 /* PPHead.h */,
 				9D8E93EE19765699008B1C08 /* PPHelp.mm */,
 				9D8E93EF19765699008B1C08 /* PPHelp.h */,
-				9D8E93F1197656EC008B1C08 /* PPHelp.cpp */,
+				9D8E93F319766498008B1C08 /* PPImagePicker.h */,
+				9D8E93F419766498008B1C08 /* PPImagePicker.m */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -2026,6 +2028,7 @@
 				15A3D9091682F7D5002FB0C5 /* b2EdgeShape.cpp in Sources */,
 				15A3D90A1682F7D5002FB0C5 /* b2PolygonShape.cpp in Sources */,
 				15A3D90B1682F7D5002FB0C5 /* b2BlockAllocator.cpp in Sources */,
+				9D8E93F519766498008B1C08 /* PPImagePicker.m in Sources */,
 				15A3D90C1682F7D5002FB0C5 /* b2Draw.cpp in Sources */,
 				375BD4C61868411B0024609E /* TriggerObj.cpp in Sources */,
 				375BD4C31868411B0024609E /* ObjectFactory.cpp in Sources */,
@@ -2106,7 +2109,6 @@
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
 				9D8E93E919764E96008B1C08 /* PPLabel.cpp in Sources */,
 				298B29BC18D0668400C1920F /* ImageViewReader.cpp in Sources */,
-				9D8E93F2197656EC008B1C08 /* PPHelp.cpp in Sources */,
 				15A3DA3B1682F826002FB0C5 /* CCLabelBMFontLoader.cpp in Sources */,
 				15A3DA3C1682F826002FB0C5 /* CCLabelTTFLoader.cpp in Sources */,
 				15A3DA3D1682F826002FB0C5 /* CCLayerColorLoader.cpp in Sources */,
@@ -2256,8 +2258,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Super Goo (3V7454SN68)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -2294,7 +2296,7 @@
 				OTHER_CFLAGS = "-O2";
 				PRODUCT_NAME = Picture;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B714CD42-86ED-48FC-8DD2-F025B05E128D";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2357,6 +2359,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7 i386";
 			};
@@ -2370,6 +2373,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7 i386";

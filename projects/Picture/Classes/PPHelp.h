@@ -12,6 +12,6 @@ private:
 	PPHelp(){};
 	~PPHelp(){};
 	
-}
+};
 
 #endif /* defined(__Picture__PPHelp__) */

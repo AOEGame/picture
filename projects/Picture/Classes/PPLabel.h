@@ -11,7 +11,7 @@ class PPLabel : public cocos2d::CCLabelTTF
 {
 public:
 	PPLabel();
-	~PPLabel();
+	virtual ~PPLabel();
 	
 	static PPLabel *create(const char *fontName, float fontSize);
 	

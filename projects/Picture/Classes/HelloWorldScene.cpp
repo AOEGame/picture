@@ -32,11 +32,7 @@ bool HelloWorld::init()
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
 
-    // add a "close" icon to exit the progress. it's an autorelease object
     CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
                                         "CloseNormal.png",
                                         "CloseSelected.png",
@@ -66,6 +62,8 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
+//	PPHelp::userImages();
+	
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
 	CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
 #else
