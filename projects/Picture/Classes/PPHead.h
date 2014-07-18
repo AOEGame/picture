@@ -6,5 +6,6 @@
 #include "PPLabel.h"
 #include "PPConfig.h"
 #include "PPHelp.h"
+#include "NTJava.h"
 
 #endif

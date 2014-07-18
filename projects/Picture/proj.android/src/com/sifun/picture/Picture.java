@@ -32,6 +32,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 
 public class Picture extends Cocos2dxActivity{
 	
@@ -51,24 +52,26 @@ public class Picture extends Cocos2dxActivity{
     private static int SELECT_CAMERA = 1;
     
     public static void showImageDialog(){
+    	Log.v("cocos2dx", "dddddddddddd");
     	CharSequence[] items = {"相册", "相机"};
-    	new AlertDialog.Builder(getContext()).setTitle("选择").setItems(items, new OnClickListener() {
+    	new AlertDialog.Builder(((Picture)getContext())).setTitle("选择").setItems(items, new OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
-				if(which == 0 ){
-					Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-					intent.addCategory(Intent.CATEGORY_OPENABLE);
-					intent.setType("image/*");
-					((Picture)getContext()).startActivityForResult(Intent.createChooser(intent, "选择"), SELECT_PICTURE);
-					
-				}else{
-					Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-					((Picture)getContext()).startActivityForResult(intent, SELECT_CAMERA);
-				}
+//				if(which == 0 ){
+//					Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//					intent.addCategory(Intent.CATEGORY_OPENABLE);
+////					intent.setType("image/*");
+//					((Picture)getContext()).startActivityForResult(Intent.createChooser(intent, "选择"), SELECT_PICTURE);
+//					
+//				}else{
+//					Log.v("cocos2dx", "相机");
+//					Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//					((Picture)getContext()).startActivityForResult(intent, SELECT_CAMERA);
+//				}
 			}
-		});
+		}).create().show();
     	
     }
 
