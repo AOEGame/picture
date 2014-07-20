@@ -48,15 +48,28 @@ bool HelloWorld::init()
     this->addChild(pMenu, 1);
 
    
-	PPLabel *label = PPLabel::create(PP_FONT_NAME, 18);
-	label->setString("Helvetica");
-	label->setPosition(ccp(160, 160));
-	addChild(label);
+//	PPLabel *label = PPLabel::create(PP_FONT_NAME, 18);
+//	label->setString("Helvetica");
+//	label->setPosition(ccp(160, 160));
+//	addChild(label);
 	
-    
-	
+    initSprite();
 	
     return true;
+}
+
+void HelloWorld::initSprite()
+{
+    const char * fileName = "Default.png";
+    float width = 60;
+    float padding = 70;
+    
+    for (int i = 1; i <= 9; i++) {
+        CCSprite *sp1  = CCSprite::create(fileName, CCRectMake(((i - 1) % 3 ) * width, int((i - 1) / 3) * width, width, width));
+        sp1->setAnchorPoint(ccp(0.5, 0.5));
+        sp1->setPosition(ccp(padding + 0.5f * width + ((i - 1) % 3) * (width + 1), 400 - (padding + 0.5f * width + int((i - 1) / 3) * (width + 1))));
+        addChild(sp1);
+    }
 }
 
 
