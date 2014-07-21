@@ -31,6 +31,7 @@ private:
 	
 	float m_pSpriteWidth;
 	
+	float isMove;
 	
 	cocos2d::CCArray *m_pArray;
 	
