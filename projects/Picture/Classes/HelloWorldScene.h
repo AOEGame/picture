@@ -17,6 +17,8 @@ public:
     CREATE_FUNC(HelloWorld);
     
     void initSprite();
+private:
+    cocos2d::CCSprite *m_pDefault;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

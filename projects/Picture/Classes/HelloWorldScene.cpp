@@ -4,22 +4,18 @@
 
 USING_NS_CC;
 
+static CCScene *m_sc = NULL;
+
+
 CCScene* HelloWorld::scene()
 {
-    // 'scene' is an autorelease object
-    CCScene *scene = CCScene::create();
-    
-    // 'layer' is an autorelease object
-    HelloWorld *layer = HelloWorld::create();
-
-    // add layer as a child to scene
-    scene->addChild(layer);
-
-    // return the scene
-    return scene;
+    if (!m_sc) {
+        m_sc = CCScene::create();
+    }
+    return m_sc;
 }
 
-// on "init" you need to initialize your instance
+
 bool HelloWorld::init()
 {
     //////////////////////////////
@@ -66,22 +62,17 @@ void HelloWorld::draw()
 
 void HelloWorld::initSprite()
 {
-    const char * fileName = "Default.png";
-//    float width = 50;
-//    float padding = 70;
-//    
-//    for (int i = 1; i <= 16; i++) {
-//        PPSprite *sp1  = PPSprite::createWithRect(fileName, CCRectMake(((i - 1) % 4 ) * width, int((i - 1) / 4) * width, width, width));
-//        sp1->setAnchorPoint(ccp(0.5, 0.5));
-//        sp1->setPosition(ccp(padding + 0.5f * sp1->getContentSize().width + ((i - 1) % 4) * sp1->getContentSize().width, 400 - (padding + 0.5f * sp1->getContentSize().height + int((i - 1) / 4) * sp1->getContentSize().height)));
-//        addChild(sp1);
-//    }
-	
-	PPCenterSprite *pSprite = PPCenterSprite::createWithFilename(fileName, 50.0f, 4);
+    const char * fileName = "girl01.png";
+	PPCenterSprite *pSprite = PPCenterSprite::createWithFilename(fileName, 60.0f, 4);
 	
 	pSprite->setAnchorPoint(ccp(0.5, 0.5));
-	pSprite->setPosition(ccp(160, 300));
+	pSprite->setPosition(ccp(160, 200));
 	addChild(pSprite);
+    
+    m_pDefault = PPCenterSprite::create(fileName, CCRectMake(0, 0, 60 * 4, 60*4));
+    m_pDefault->setScale(0.5);
+    m_pDefault->setPosition(ccp(90, 400));
+    addChild(m_pDefault);
 }
 
 

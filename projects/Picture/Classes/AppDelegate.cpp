@@ -1,5 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "MenuLayer.h"
+#include "PPConfig.h"
 
 USING_NS_CC;
 
@@ -33,6 +35,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
     CCScene *pScene = HelloWorld::scene();
 
+    MenuLayer *layer = MenuLayer::create();
+    
+    layer->setTag(PP_MENU_LAYER_TAG);
+    
+    pScene->addChild(layer);
+    
     // run
     pDirector->runWithScene(pScene);
 

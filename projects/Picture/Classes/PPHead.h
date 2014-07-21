@@ -9,5 +9,6 @@
 #include "NTJava.h"
 #include "PPSprite.h"
 #include "PPCenterSprite.h"
+#include "MenuLayer.h"
 
 #endif
