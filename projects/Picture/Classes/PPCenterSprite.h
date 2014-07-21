@@ -29,6 +29,7 @@ private:
 	float pWidth; //单个长度
 	int pNum; //一行数量
 	
+	float m_pSpriteWidth;
 	
 	
 	cocos2d::CCArray *m_pArray;
