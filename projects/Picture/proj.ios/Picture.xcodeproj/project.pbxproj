@@ -244,6 +244,8 @@
 		9D8E93E919764E96008B1C08 /* PPLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93E719764E96008B1C08 /* PPLabel.cpp */; };
 		9D8E93F019765699008B1C08 /* PPHelp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93EE19765699008B1C08 /* PPHelp.mm */; };
 		9D8E93F519766498008B1C08 /* PPImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93F419766498008B1C08 /* PPImagePicker.m */; };
+		9DA1FBEB197CAF5A00541D10 /* PPSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DA1FBE9197CAF5A00541D10 /* PPSprite.cpp */; };
+		9DA1FBEE197CB80800541D10 /* PPCenterSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DA1FBEC197CB80800541D10 /* PPCenterSprite.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -770,6 +772,10 @@
 		9D8E93EF19765699008B1C08 /* PPHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPHelp.h; path = ../Classes/PPHelp.h; sourceTree = "<group>"; };
 		9D8E93F319766498008B1C08 /* PPImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPImagePicker.h; path = ../Classes/PPImagePicker.h; sourceTree = "<group>"; };
 		9D8E93F419766498008B1C08 /* PPImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPImagePicker.m; path = ../Classes/PPImagePicker.m; sourceTree = "<group>"; };
+		9DA1FBE9197CAF5A00541D10 /* PPSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPSprite.cpp; path = ../Classes/PPSprite.cpp; sourceTree = "<group>"; };
+		9DA1FBEA197CAF5A00541D10 /* PPSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPSprite.h; path = ../Classes/PPSprite.h; sourceTree = "<group>"; };
+		9DA1FBEC197CB80800541D10 /* PPCenterSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPCenterSprite.cpp; path = ../Classes/PPCenterSprite.cpp; sourceTree = "<group>"; };
+		9DA1FBED197CB80800541D10 /* PPCenterSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPCenterSprite.h; path = ../Classes/PPCenterSprite.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1314,6 +1320,10 @@
 				9D8E93EF19765699008B1C08 /* PPHelp.h */,
 				9D8E93F319766498008B1C08 /* PPImagePicker.h */,
 				9D8E93F419766498008B1C08 /* PPImagePicker.m */,
+				9DA1FBE9197CAF5A00541D10 /* PPSprite.cpp */,
+				9DA1FBEA197CAF5A00541D10 /* PPSprite.h */,
+				9DA1FBEC197CB80800541D10 /* PPCenterSprite.cpp */,
+				9DA1FBED197CB80800541D10 /* PPCenterSprite.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -2075,6 +2085,7 @@
 				15A3D99B1682F7F9002FB0C5 /* cpGrooveJoint.c in Sources */,
 				15A3D99C1682F7F9002FB0C5 /* cpPinJoint.c in Sources */,
 				15A3D99D1682F7F9002FB0C5 /* cpPivotJoint.c in Sources */,
+				9DA1FBEB197CAF5A00541D10 /* PPSprite.cpp in Sources */,
 				15A3D99E1682F7F9002FB0C5 /* cpRatchetJoint.c in Sources */,
 				15A3D99F1682F7F9002FB0C5 /* cpRotaryLimitJoint.c in Sources */,
 				15A3D9A01682F7F9002FB0C5 /* cpSimpleMotor.c in Sources */,
@@ -2108,6 +2119,7 @@
 				15A3DA391682F826002FB0C5 /* CCControlLoader.cpp in Sources */,
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
 				9D8E93E919764E96008B1C08 /* PPLabel.cpp in Sources */,
+				9DA1FBEE197CB80800541D10 /* PPCenterSprite.cpp in Sources */,
 				298B29BC18D0668400C1920F /* ImageViewReader.cpp in Sources */,
 				15A3DA3B1682F826002FB0C5 /* CCLabelBMFontLoader.cpp in Sources */,
 				15A3DA3C1682F826002FB0C5 /* CCLabelTTFLoader.cpp in Sources */,

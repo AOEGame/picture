@@ -7,5 +7,7 @@
 #include "PPConfig.h"
 #include "PPHelp.h"
 #include "NTJava.h"
+#include "PPSprite.h"
+#include "PPCenterSprite.h"
 
 #endif

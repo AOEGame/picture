@@ -53,23 +53,35 @@ bool HelloWorld::init()
 //	label->setPosition(ccp(160, 160));
 //	addChild(label);
 	
-    initSprite();
+    this->initSprite();
 	
     return true;
+}
+
+void HelloWorld::draw()
+{
+	CCSize size = CCDirector::sharedDirector()->getWinSize();
+	ccDrawSolidRect(ccp(0, 0), ccp(size.width, size.height), ccc4f(1.0f, 1.0f, 1.0f, 1.0f));
 }
 
 void HelloWorld::initSprite()
 {
     const char * fileName = "Default.png";
-    float width = 60;
-    float padding = 70;
-    
-    for (int i = 1; i <= 9; i++) {
-        CCSprite *sp1  = CCSprite::create(fileName, CCRectMake(((i - 1) % 3 ) * width, int((i - 1) / 3) * width, width, width));
-        sp1->setAnchorPoint(ccp(0.5, 0.5));
-        sp1->setPosition(ccp(padding + 0.5f * width + ((i - 1) % 3) * (width + 1), 400 - (padding + 0.5f * width + int((i - 1) / 3) * (width + 1))));
-        addChild(sp1);
-    }
+//    float width = 50;
+//    float padding = 70;
+//    
+//    for (int i = 1; i <= 16; i++) {
+//        PPSprite *sp1  = PPSprite::createWithRect(fileName, CCRectMake(((i - 1) % 4 ) * width, int((i - 1) / 4) * width, width, width));
+//        sp1->setAnchorPoint(ccp(0.5, 0.5));
+//        sp1->setPosition(ccp(padding + 0.5f * sp1->getContentSize().width + ((i - 1) % 4) * sp1->getContentSize().width, 400 - (padding + 0.5f * sp1->getContentSize().height + int((i - 1) / 4) * sp1->getContentSize().height)));
+//        addChild(sp1);
+//    }
+	
+	PPCenterSprite *pSprite = PPCenterSprite::createWithFilename(fileName, 50.0f, 4);
+	
+	pSprite->setAnchorPoint(ccp(0.5, 0.5));
+	pSprite->setPosition(ccp(160, 300));
+	addChild(pSprite);
 }
 
 
