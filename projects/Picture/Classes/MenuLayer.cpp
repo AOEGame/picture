@@ -25,6 +25,11 @@ bool MenuLayer::init()
     if (!CCLayer::init()) {
         return false;
     }
+
+	CCSize size = CCDirector::sharedDirector()->getWinSize();
+	CCSprite *bg = CCSprite::create("start_bg.png");
+	bg->setPosition(ccp(160, size.height / 2));
+	this->addChild(bg, -1);
     
     CCSprite *sp1 = CCSprite::create("Icon-114.png");
     CCMenuItemSprite *item1 =  CCMenuItemSprite::create (sp1, NULL, this, menu_selector(MenuLayer::buttonClicked));

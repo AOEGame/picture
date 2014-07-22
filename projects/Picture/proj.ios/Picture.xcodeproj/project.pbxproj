@@ -241,6 +241,7 @@
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
+		9D382A52197DF9FF001F928D /* start_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D382A51197DF9FF001F928D /* start_bg.png */; };
 		9D8E93E919764E96008B1C08 /* PPLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93E719764E96008B1C08 /* PPLabel.cpp */; };
 		9D8E93F019765699008B1C08 /* PPHelp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93EE19765699008B1C08 /* PPHelp.mm */; };
 		9D8E93F519766498008B1C08 /* PPImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93F419766498008B1C08 /* PPImagePicker.m */; };
@@ -261,16 +262,6 @@
 		D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EF949F15BD2D9800D803EB /* Icon-144.png */; };
 		E900077F197D47B800A9321B /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E900077D197D47B800A9321B /* MenuLayer.cpp */; };
 		E9000791197D661000A9321B /* girl01.png in Resources */ = {isa = PBXBuildFile; fileRef = E9000786197D661000A9321B /* girl01.png */; };
-		E9000792197D661000A9321B /* katong01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9000787197D661000A9321B /* katong01.jpg */; };
-		E9000793197D661000A9321B /* katong02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9000788197D661000A9321B /* katong02.jpg */; };
-		E9000794197D661000A9321B /* katong03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9000789197D661000A9321B /* katong03.jpg */; };
-		E9000795197D661000A9321B /* katong04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E900078A197D661000A9321B /* katong04.jpg */; };
-		E9000796197D661000A9321B /* katong05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E900078B197D661000A9321B /* katong05.jpg */; };
-		E9000797197D661000A9321B /* katong06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E900078C197D661000A9321B /* katong06.jpg */; };
-		E9000798197D661000A9321B /* katong07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E900078D197D661000A9321B /* katong07.jpg */; };
-		E9000799197D661000A9321B /* katong08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E900078E197D661000A9321B /* katong08.jpg */; };
-		E900079A197D661000A9321B /* katong09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E900078F197D661000A9321B /* katong09.jpg */; };
-		E900079B197D661000A9321B /* katong10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9000790197D661000A9321B /* katong10.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -776,6 +767,7 @@
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		9D382A51197DF9FF001F928D /* start_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_bg.png; sourceTree = "<group>"; };
 		9D8E93E719764E96008B1C08 /* PPLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPLabel.cpp; path = ../Classes/PPLabel.cpp; sourceTree = "<group>"; };
 		9D8E93E819764E96008B1C08 /* PPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPLabel.h; path = ../Classes/PPLabel.h; sourceTree = "<group>"; };
 		9D8E93EA19764ECA008B1C08 /* PPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPConfig.h; path = ../Classes/PPConfig.h; sourceTree = "<group>"; };
@@ -805,16 +797,6 @@
 		E900077D197D47B800A9321B /* MenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuLayer.cpp; path = ../Classes/MenuLayer.cpp; sourceTree = "<group>"; };
 		E900077E197D47B800A9321B /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = ../Classes/MenuLayer.h; sourceTree = "<group>"; };
 		E9000786197D661000A9321B /* girl01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl01.png; sourceTree = "<group>"; };
-		E9000787197D661000A9321B /* katong01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong01.jpg; sourceTree = "<group>"; };
-		E9000788197D661000A9321B /* katong02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong02.jpg; sourceTree = "<group>"; };
-		E9000789197D661000A9321B /* katong03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong03.jpg; sourceTree = "<group>"; };
-		E900078A197D661000A9321B /* katong04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong04.jpg; sourceTree = "<group>"; };
-		E900078B197D661000A9321B /* katong05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong05.jpg; sourceTree = "<group>"; };
-		E900078C197D661000A9321B /* katong06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong06.jpg; sourceTree = "<group>"; };
-		E900078D197D661000A9321B /* katong07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong07.jpg; sourceTree = "<group>"; };
-		E900078E197D661000A9321B /* katong08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong08.jpg; sourceTree = "<group>"; };
-		E900078F197D661000A9321B /* katong09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong09.jpg; sourceTree = "<group>"; };
-		E9000790197D661000A9321B /* katong10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katong10.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1965,17 +1947,8 @@
 		E9000785197D661000A9321B /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				9D382A51197DF9FF001F928D /* start_bg.png */,
 				E9000786197D661000A9321B /* girl01.png */,
-				E9000787197D661000A9321B /* katong01.jpg */,
-				E9000788197D661000A9321B /* katong02.jpg */,
-				E9000789197D661000A9321B /* katong03.jpg */,
-				E900078A197D661000A9321B /* katong04.jpg */,
-				E900078B197D661000A9321B /* katong05.jpg */,
-				E900078C197D661000A9321B /* katong06.jpg */,
-				E900078D197D661000A9321B /* katong07.jpg */,
-				E900078E197D661000A9321B /* katong08.jpg */,
-				E900078F197D661000A9321B /* katong09.jpg */,
-				E9000790197D661000A9321B /* katong10.jpg */,
 			);
 			path = pic;
 			sourceTree = "<group>";
@@ -2050,26 +2023,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
-				E9000797197D661000A9321B /* katong06.jpg in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
-				E9000795197D661000A9321B /* katong04.jpg in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				E9000791197D661000A9321B /* girl01.png in Resources */,
-				E9000793197D661000A9321B /* katong02.jpg in Resources */,
-				E900079B197D661000A9321B /* katong10.jpg in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
-				E9000798197D661000A9321B /* katong07.jpg in Resources */,
-				E9000792197D661000A9321B /* katong01.jpg in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
-				E9000794197D661000A9321B /* katong03.jpg in Resources */,
+				9D382A52197DF9FF001F928D /* start_bg.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
-				E9000799197D661000A9321B /* katong08.jpg in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
-				E9000796197D661000A9321B /* katong05.jpg in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
-				E900079A197D661000A9321B /* katong09.jpg in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
