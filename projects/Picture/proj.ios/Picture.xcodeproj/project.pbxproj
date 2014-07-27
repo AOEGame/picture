@@ -163,9 +163,6 @@
 		1ACB3244164770DE00914215 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACB3243164770DE00914215 /* libcurl.a */; };
 		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
 		1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
-		1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
-		1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
-		1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
 		1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCDA8116D4A25900906EA6 /* RootViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -241,7 +238,6 @@
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
-		9D382A52197DF9FF001F928D /* start_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D382A51197DF9FF001F928D /* start_bg.png */; };
 		9D8E93E919764E96008B1C08 /* PPLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93E719764E96008B1C08 /* PPLabel.cpp */; };
 		9D8E93F019765699008B1C08 /* PPHelp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93EE19765699008B1C08 /* PPHelp.mm */; };
 		9D8E93F519766498008B1C08 /* PPImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E93F419766498008B1C08 /* PPImagePicker.m */; };
@@ -262,6 +258,10 @@
 		D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = D4EF949F15BD2D9800D803EB /* Icon-144.png */; };
 		E900077F197D47B800A9321B /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E900077D197D47B800A9321B /* MenuLayer.cpp */; };
 		E9000791197D661000A9321B /* girl01.png in Resources */ = {isa = PBXBuildFile; fileRef = E9000786197D661000A9321B /* girl01.png */; };
+		E951AEB819849A3900011457 /* PPScrollerLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E951AEB619849A3900011457 /* PPScrollerLayer.cpp */; };
+		E95E99EF1984B6DF00D90890 /* haizeiwang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E95E99EE1984B6DF00D90890 /* haizeiwang.jpg */; };
+		E95E99F41984B9E600D90890 /* 009.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E95E99F11984B9E600D90890 /* 009.jpg */; };
+		E95E99F51984B9E600D90890 /* rectangle_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E95E99F21984B9E600D90890 /* rectangle_blue.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -602,9 +602,6 @@
 		1AFAF8B416D35DE700DB1158 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
 		1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = ../Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
 		1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = ../Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		1AFAF8B916D35E4900DB1158 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
-		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
-		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		1AFCDA8016D4A25900906EA6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = SOURCE_ROOT; };
 		1AFCDA8116D4A25900906EA6 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = SOURCE_ROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -767,7 +764,6 @@
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
-		9D382A51197DF9FF001F928D /* start_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_bg.png; sourceTree = "<group>"; };
 		9D8E93E719764E96008B1C08 /* PPLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPLabel.cpp; path = ../Classes/PPLabel.cpp; sourceTree = "<group>"; };
 		9D8E93E819764E96008B1C08 /* PPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPLabel.h; path = ../Classes/PPLabel.h; sourceTree = "<group>"; };
 		9D8E93EA19764ECA008B1C08 /* PPConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPConfig.h; path = ../Classes/PPConfig.h; sourceTree = "<group>"; };
@@ -797,6 +793,11 @@
 		E900077D197D47B800A9321B /* MenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuLayer.cpp; path = ../Classes/MenuLayer.cpp; sourceTree = "<group>"; };
 		E900077E197D47B800A9321B /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = ../Classes/MenuLayer.h; sourceTree = "<group>"; };
 		E9000786197D661000A9321B /* girl01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl01.png; sourceTree = "<group>"; };
+		E951AEB619849A3900011457 /* PPScrollerLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPScrollerLayer.cpp; path = ../Classes/PPScrollerLayer.cpp; sourceTree = "<group>"; };
+		E951AEB719849A3900011457 /* PPScrollerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPScrollerLayer.h; path = ../Classes/PPScrollerLayer.h; sourceTree = "<group>"; };
+		E95E99EE1984B6DF00D90890 /* haizeiwang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = haizeiwang.jpg; sourceTree = "<group>"; };
+		E95E99F11984B9E600D90890 /* 009.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 009.jpg; sourceTree = "<group>"; };
+		E95E99F21984B9E600D90890 /* rectangle_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle_blue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1333,6 +1334,8 @@
 				9DA1FBED197CB80800541D10 /* PPCenterSprite.h */,
 				E900077D197D47B800A9321B /* MenuLayer.cpp */,
 				E900077E197D47B800A9321B /* MenuLayer.h */,
+				E951AEB619849A3900011457 /* PPScrollerLayer.cpp */,
+				E951AEB719849A3900011457 /* PPScrollerLayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -1929,9 +1932,6 @@
 			isa = PBXGroup;
 			children = (
 				E9000785197D661000A9321B /* pic */,
-				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
-				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
-				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 				D41A0AD0160F154A004552AE /* Default-568h@2x.png */,
 				7855E0DF153FEF240059DD9A /* Default.png */,
 				D446FD6D16102124000ADA7B /* Default@2x.png */,
@@ -1947,7 +1947,9 @@
 		E9000785197D661000A9321B /* pic */ = {
 			isa = PBXGroup;
 			children = (
-				9D382A51197DF9FF001F928D /* start_bg.png */,
+				E95E99EE1984B6DF00D90890 /* haizeiwang.jpg */,
+				E95E99F11984B9E600D90890 /* 009.jpg */,
+				E95E99F21984B9E600D90890 /* rectangle_blue.png */,
 				E9000786197D661000A9321B /* girl01.png */,
 			);
 			path = pic;
@@ -2024,17 +2026,16 @@
 			files = (
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
+				E95E99F41984B9E600D90890 /* 009.jpg in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
 				E9000791197D661000A9321B /* girl01.png in Resources */,
+				E95E99F51984B9E600D90890 /* rectangle_blue.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
-				9D382A52197DF9FF001F928D /* start_bg.png in Resources */,
+				E95E99EF1984B6DF00D90890 /* haizeiwang.jpg in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
-				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
-				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
-				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2178,6 +2179,7 @@
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
+				E951AEB819849A3900011457 /* PPScrollerLayer.cpp in Sources */,
 				15A3DA571682F826002FB0C5 /* CCEditBoxImplIOS.mm in Sources */,
 				15A3DA591682F826002FB0C5 /* CCScrollView.cpp in Sources */,
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,

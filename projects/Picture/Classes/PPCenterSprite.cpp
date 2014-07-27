@@ -4,9 +4,11 @@
 
 PPCenterSprite::PPCenterSprite()
 	: emptyPos(cocos2d::CCPointZero)
+    , lastPos(cocos2d::CCPointZero)
 	, startPos(cocos2d::CCPointZero)
 	, m_pArray(NULL)
 	, isMove(false)
+    , canTouch(true)
 {
 }
 
@@ -53,13 +55,14 @@ bool PPCenterSprite::initWithFileName(const char *fileName, float w, int num)
 		
 		cocos2d::CCPoint pos = ccp(((i - 1) % pNum) * sp1->getContentSize().width, width - m_pSpriteWidth - (int((i - 1) / pNum) * sp1->getContentSize().height));
 		
-		CCLOG("-%1.0f-%1.0f",width, width - m_pSpriteWidth - (int((i - 1) / pNum) * sp1->getContentSize().height));
+		
 		
         sp1->setPosition(pos);
 		sp1->setPos(pos);
         this->addChild(sp1);
 		if (i == pNum * pNum) {
 			emptyPos = pos;
+            lastPos = pos;
 			sp1->setVisible(false);
 			break;
 		}
@@ -76,12 +79,14 @@ bool PPCenterSprite::initWithFileName(const char *fileName, float w, int num)
 
 bool PPCenterSprite::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 {
-	cocos2d::CCPoint pos = this->getParent()->convertTouchToNodeSpace(pTouch);
-	if (this->boundingBox().containsPoint(pos)) {
-		isMove = false;
-		startPos = convertTouchToNodeSpace(pTouch);
-		return true;
-	}
+    if (pTouch != NULL && canTouch) {
+        cocos2d::CCPoint pos = this->getParent()->convertTouchToNodeSpace(pTouch);
+        if (this->boundingBox().containsPoint(pos) && canTouch) {
+            isMove = false;
+            startPos = convertTouchToNodeSpace(pTouch);
+            return true;
+        }
+    }
 	
 	return false;
 }
@@ -92,72 +97,151 @@ void PPCenterSprite::ccTouchMoved(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pE
 	
 	if (fabsf(pos.x - startPos.x) > fabsf(pos.y - startPos.y)  && fabsf(pos.x - startPos.x) > 10.0f && !isMove) {
 		//		x轴方向
-		if (pos.x - startPos.x > 0 && emptyPos.x > 0) {
-			float x = emptyPos.x - m_pSpriteWidth;
-			for (int i = 0; i < m_pArray->count(); i++) {
-				PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
-				if (sprite->getPosition().equals(ccp(x, emptyPos.y))) {
-					emptyPos = sprite->getPosition();
-					isMove = true;
-					sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(x += m_pSpriteWidth, emptyPos.y)));
-					break;
-				}
-			}
-		}else if (pos.x - startPos.x < 0 && emptyPos.x < m_pSpriteWidth * pNum){
+		if (pos.x - startPos.x > 0 ) {
+			moveRight(true);
+		}else if (pos.x - startPos.x < 0){
 			
-			float x = emptyPos.x + m_pSpriteWidth;
-			for (int i = 0; i < m_pArray->count(); i++) {
-				PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
-				if (sprite->getPosition().equals(ccp(x, emptyPos.y))) {
-					emptyPos = sprite->getPosition();
-					isMove = true;
-					sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(x -= m_pSpriteWidth, emptyPos.y)));
-					break;
-				}
-			}
+			moveLeft(true);
 		}
 		
 	}else if(fabsf(pos.x - startPos.x) <= fabsf(pos.y - startPos.y)  && fabsf(pos.y - startPos.y) > 10.0f && !isMove){
 		//   y轴方向
 		
-		if (pos.y - startPos.y > 0 && emptyPos.y > 0) {
-			float y = emptyPos.y - m_pSpriteWidth;
-			for (int i = 0; i < m_pArray->count(); i++) {
-				PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
-				if (sprite->getPosition().equals(ccp(emptyPos.x, y))) {
-					emptyPos = sprite->getPosition();
-					isMove = true;
-					sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(emptyPos.x, y + m_pSpriteWidth)));
-					break;
-				}
-			}
-		}else if(pos.y - startPos.y < 0 && emptyPos.y < m_pSpriteWidth * pNum){
-			float y = emptyPos.y + m_pSpriteWidth;
-			for (int i = 0; i < m_pArray->count(); i++) {
-				PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
-				if (sprite->getPosition().equals(ccp(emptyPos.x, y))) {
-					emptyPos = sprite->getPosition();
-					isMove = true;
-					sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(emptyPos.x, y - m_pSpriteWidth)));
-					break;
-				}
-			}
+		if (pos.y - startPos.y > 0) {
+			moveOn(true);
+		}else if(pos.y - startPos.y < 0){
+			moveDown(true);
 		}
 		
 	}
 }
+
+void PPCenterSprite::moveDown(bool b)
+{
+    if ( emptyPos.y < m_pSpriteWidth * pNum) {
+        float y = emptyPos.y + m_pSpriteWidth;
+        for (int i = 0; i < m_pArray->count(); i++) {
+            PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
+            if (sprite->getPosition().equals(ccp(emptyPos.x, y))) {
+                emptyPos = sprite->getPosition();
+                isMove = true;
+                if (b) {
+                    sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(emptyPos.x, y - m_pSpriteWidth)));
+                }else{
+                    sprite->setPosition(ccp(emptyPos.x, y - m_pSpriteWidth));
+                }
+                
+                break;
+            }
+        }
+    }
+}
+
+void PPCenterSprite::moveLeft(bool b)
+{
+    if (emptyPos.x < m_pSpriteWidth * pNum) {
+        float x = emptyPos.x + m_pSpriteWidth;
+        for (int i = 0; i < m_pArray->count(); i++) {
+            PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
+            if (sprite->getPosition().equals(ccp(x, emptyPos.y))) {
+                emptyPos = sprite->getPosition();
+                isMove = true;
+                if (b) {
+                    sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(x -= m_pSpriteWidth, emptyPos.y)));
+                }else{
+                    sprite->setPosition(ccp(x -= m_pSpriteWidth, emptyPos.y));
+                }
+                
+                break;
+            }
+        }
+    }
+}
+
+void PPCenterSprite::moveRight(bool b)
+{
+    if (emptyPos.x > 0) {
+        float x = emptyPos.x - m_pSpriteWidth;
+        for (int i = 0; i < m_pArray->count(); i++) {
+            PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
+            if (sprite->getPosition().equals(ccp(x, emptyPos.y))) {
+                emptyPos = sprite->getPosition();
+                isMove = true;
+                if (b) {
+                     sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(x += m_pSpriteWidth, emptyPos.y)));
+                }else{
+                    sprite->setPosition(ccp(x += m_pSpriteWidth, emptyPos.y));
+                }
+               
+                break;
+            }
+        }
+    }
+    
+}
+
+void PPCenterSprite::moveOn(bool b)
+{
+    if (emptyPos.y > 0) {
+        float y = emptyPos.y - m_pSpriteWidth;
+        for (int i = 0; i < m_pArray->count(); i++) {
+            PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
+            if (sprite->getPosition().equals(ccp(emptyPos.x, y))) {
+                emptyPos = sprite->getPosition();
+                isMove = true;
+                if (b) {
+                    sprite->runAction(cocos2d::CCMoveTo::create(0.07, ccp(emptyPos.x, y + m_pSpriteWidth)));
+                }else{
+                    sprite->setPosition(ccp(emptyPos.x, y + m_pSpriteWidth));
+                }
+                
+                break;
+            }
+        }
+    }
+}
+
 
 void PPCenterSprite::ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 {
 
 }
 
+bool PPCenterSprite::isEmptyAtLast()
+{
+    if (emptyPos.equals(lastPos)) {
+        return true;
+    }
+    
+    return false;
+}
 
+bool PPCenterSprite::isWin()
+{
+    bool isWin = true;
+    for (int i = 0; i < m_pArray->count(); i++) {
+        PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
+        if (!sprite->getPosition().equals(sprite->getPos())) {
+            isWin = false;
+            break;
+        }
+    }
+    return isWin;
+}
 
+void PPCenterSprite::reset()
+{
+    canTouch = true;
+    for (int i = 0; i < m_pArray->count(); i++) {
+        PPSprite *sprite = (PPSprite *)m_pArray->objectAtIndex(i);
+        sprite->setPosition(sprite->getPos());
+    }
+}
 
-
-
-
+void PPCenterSprite::draw()
+{
+	ccDrawSolidRect(ccp(0, 0), this->getContentSize(), cocos2d::ccc4f(1.0f, 1.0f, 1.0f, 1.0f));
+}
 
 
 

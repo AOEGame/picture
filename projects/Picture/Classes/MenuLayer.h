@@ -18,6 +18,8 @@ public:
     
     void buttonClicked(cocos2d::CCObject *obj);
     
+    virtual void draw();
+    
 };
 
 #endif /* defined(__Picture__MenuLayer__) */

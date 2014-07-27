@@ -23,7 +23,27 @@ public:
 	virtual void ccTouchMoved(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
 	
 	virtual void ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent);
+    
+    bool isEmptyAtLast();
+    
+    void setCanTouch(bool b){
+        canTouch = b;
+    };
 	
+    bool isWin();
+    
+    void moveLeft(bool b);
+    
+    void moveRight(bool b);
+    
+    void moveOn(bool b);
+    
+    void moveDown(bool b);
+    
+    void reset();
+    
+    virtual void draw();
+    
 private:
 	const char* m_pName;
 	float pWidth; //单个长度
@@ -38,6 +58,9 @@ private:
 	cocos2d::CCPoint startPos;
 	
 	cocos2d::CCPoint emptyPos;
+    cocos2d::CCPoint lastPos;
+    
+    bool  canTouch;
 };
 
 
